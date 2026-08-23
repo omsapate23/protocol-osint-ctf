@@ -1,7 +1,12 @@
 name: "Level 06: Caesar's Escape"
 author: "PROTOCOL"
 category: "Decoding / CyberChef"
-value: 100
+value: 250
+type: dynamic
+extra:
+  initial: 250
+  decay: 20
+  minimum: 100
 description: |
   Viktor shifted his final note using a classic Caesar cipher (ROT13):
   `SYNT{ebg13_qrpvcure_fhpprff}`
@@ -11,4 +16,6 @@ description: |
   **Flag Format:** `FLAG{...}`
 flags:
   - "FLAG{rot13_decipher_success}"
+requirements:
+  - "Level 05: The Burner Alias"
 state: visible

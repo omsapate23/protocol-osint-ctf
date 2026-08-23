@@ -1,7 +1,12 @@
 name: "Level 13: The Street Corner Cafe"
 author: "PROTOCOL"
 category: "GEOINT / Google Maps"
-value: 200
+value: 600
+type: dynamic
+extra:
+  initial: 600
+  decay: 35
+  minimum: 300
 description: |
   Viktor checked into a vintage cafe near the harbor. Use the visual clues and Google Maps to identify the cafe's exact name.
   
@@ -10,4 +15,6 @@ flags:
   - "FLAG{cafe_mondegar}"
 files:
   - cafe_front.jpg
+requirements:
+  - "Level 12: The Airport Boarding Gate"
 state: visible

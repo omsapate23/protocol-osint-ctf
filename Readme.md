@@ -7,9 +7,9 @@ Welcome to **Operation Rogue Echo**, a progressive 15-level OSINT and digital re
 ## 🎯 Campaign Overview
 
 * **Scenario:** Rogue ex-employee Viktor Vance has exfiltrated sensitive assets from XYZ Ltd. and vanished. Trace his physical movements, burner identities, metadata trails, and digital breadcrumbs to apprehend him.
-* **Format:** CTFd Standard Challenge Format (`ctfcli` compatible)
+* **Format:** CTFd Dynamic Scoring Format (`ctfcli` compatible) with Sequential Prerequisite Progression.
 * **Total Levels:** 15 Challenges
-* **Total Points:** 2,050 Points
+* **Progression:** Linear sequential unlocking (Level $N$ unlocks upon solving Level $N-1$).
 
 ---
 
@@ -26,25 +26,25 @@ This campaign relies exclusively on core beginner-friendly tools:
 
 ---
 
-## 🗺️ Campaign Matrix
+## 🗺️ Campaign Matrix (Dynamic Decay & Prerequisites)
 
-| Phase | Level | Challenge Name | Category | Points | Core Tool | Flag |
-| :--- | :--- | :--- | :--- | :---: | :--- | :--- |
-| **Phase 1: The Breach** | **01** | Level 01: The Break-In | Metadata / EXIF | 50 | Jimpl / ExifTool | `FLAG{3x_3mpl0y33_l34v35_4_tr4c3}` |
-| | **02** | Level 02: The Hidden Signature | Web Recon | 50 | View Page Source (`Ctrl+U`) | `FLAG{v13w_50urc3_15_f1r5t_5t3p}` |
-| | **03** | Level 03: The Camera Fingerprint | Metadata / EXIF | 75 | Jimpl / ExifTool | `FLAG{c4m3r4_m4k3_m0d3l_3xp053d}` |
-| **Phase 2: The Digital Footprint** | **04** | Level 04: The Scrambled Transmission | Decoding / CyberChef | 75 | CyberChef (From Base64) | `FLAG{b45364_unl0cks_th3_path}` |
-| | **05** | Level 05: The Burner Alias | SOCMINT / Username Recon | 100 | WhatsMyName / Profile Search | `FLAG{un4m3_3num3r4t10n_succ355}` |
-| | **06** | Level 06: Caesar's Escape | Decoding / CyberChef | 100 | CyberChef (ROT13) | `FLAG{rot13_decipher_success}` |
-| **Phase 3: The Archive & The Web** | **07** | Level 07: Google Dorking 101 | Search Recon | 125 | Google Search Dorks | `FLAG{g00gl3_d0rk1ng_3xp053d}` |
-| | **08** | Level 08: The Deleted Webpage | Web Archive | 125 | Wayback Machine | `FLAG{w4yb4ck_m4ch1n3_r3m3mb3r5}` |
-| | **09** | Level 09: The Hidden Paste | Search Recon | 150 | Search Dorks / Paste Recon | `FLAG{p45t3_d0rk1ng_unc0v3r3d}` |
-| **Phase 4: The Physical Trail** | **10** | Level 10: The Departure Landmark | GEOINT / Image Search | 150 | Google Lens / Reverse Search | `FLAG{gateway_of_india}` |
-| | **11** | Level 11: The Train Station | GEOINT / Image Search | 175 | Google Lens / Platform Recon | `FLAG{pune_junction}` |
-| | **12** | Level 12: The Airport Boarding Gate | GEOINT / Search | 175 | Flight Lookup (EK501 -> DXB) | `FLAG{d35t1n4t10n_dxb}` |
-| **Phase 5: The Final Pursuit** | **13** | Level 13: The Street Corner Cafe | GEOINT / Google Maps | 200 | Google Maps / Street View | `FLAG{cafe_mondegar}` |
-| | **14** | Level 14: The Safehouse Coordinates | GEOINT / Google Maps | 225 | Google Maps / Satellite View | `FLAG{t4j_m4h4l_p4l4c3}` |
-| | **15** | Level 15: The Final Takedown | Master Challenge / Synthesis | 250 | Multi-source Synthesis | `FLAG{pune_ek501_taj_apprehended}` |
+| Phase | Level | Challenge Name | Category | Initial | Decay | Min Floor | Prerequisite (Unlocked by) |
+| :--- | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **Phase 1: The Breach** | **01** | Level 01: The Break-In | Metadata / EXIF | **150** | 15 | **50** | 🔓 *Initially Unlocked* |
+| | **02** | Level 02: The Hidden Signature | Web Recon | **150** | 15 | **50** | 🔒 Level 01: The Break-In |
+| | **03** | Level 03: The Camera Fingerprint | Metadata / EXIF | **150** | 15 | **50** | 🔒 Level 02: The Hidden Signature |
+| **Phase 2: The Digital Footprint** | **04** | Level 04: The Scrambled Transmission | Decoding / CyberChef | **250** | 20 | **100** | 🔒 Level 03: The Camera Fingerprint |
+| | **05** | Level 05: The Burner Alias | SOCMINT / Username Recon | **250** | 20 | **100** | 🔒 Level 04: The Scrambled Transmission |
+| | **06** | Level 06: Caesar's Escape | Decoding / CyberChef | **250** | 20 | **100** | 🔒 Level 05: The Burner Alias |
+| **Phase 3: The Archive & The Web** | **07** | Level 07: Google Dorking 101 | Search Recon | **350** | 25 | **150** | 🔒 Level 06: Caesar's Escape |
+| | **08** | Level 08: The Deleted Webpage | Web Archive | **350** | 25 | **150** | 🔒 Level 07: Google Dorking 101 |
+| | **09** | Level 09: The Hidden Paste | Search Recon | **350** | 25 | **150** | 🔒 Level 08: The Deleted Webpage |
+| **Phase 4: The Physical Trail** | **10** | Level 10: The Departure Landmark | GEOINT / Image Search | **450** | 30 | **200** | 🔒 Level 09: The Hidden Paste |
+| | **11** | Level 11: The Train Station | GEOINT / Image Search | **450** | 30 | **200** | 🔒 Level 10: The Departure Landmark |
+| | **12** | Level 12: The Airport Boarding Gate | GEOINT / Search | **450** | 30 | **200** | 🔒 Level 11: The Train Station |
+| **Phase 5: The Final Pursuit** | **13** | Level 13: The Street Corner Cafe | GEOINT / Google Maps | **600** | 35 | **300** | 🔒 Level 12: The Airport Boarding Gate |
+| | **14** | Level 14: The Safehouse Coordinates | GEOINT / Google Maps | **600** | 35 | **300** | 🔒 Level 13: The Street Corner Cafe |
+| | **15** | Level 15: The Final Takedown | Master Challenge / Synthesis | **600** | 35 | **300** | 🔒 Level 14: The Safehouse Coordinates |
 
 ---
 
@@ -56,7 +56,7 @@ protocol-ctfd/
 │   └── config                  # ctfcli configuration pointing to CTFd instance
 ├── challenges/
 │   ├── level-01/
-│   │   ├── challenge.yml       # CTFd challenge descriptor
+│   │   ├── challenge.yml       # Dynamic challenge descriptor
 │   │   └── datacenter_leak.jpg # Image with EXIF UserComment & Description
 │   ├── level-02/
 │   │   ├── challenge.yml
@@ -95,8 +95,7 @@ protocol-ctfd/
 │       └── challenge.yml       # Master synthesis challenge descriptor
 ├── pages/
 │   └── index.html              # Custom CTFd homepage theme
-├── Dockerfile                  # CTFd container deployment
-├── setup_challenges.py         # Automation script to generate challenges & EXIF tags
+├── Dockerfile                  # CTFd container deployment with PostgreSQL support
 └── verify_challenges.py        # Automated test verification suite
 ```
 
@@ -109,13 +108,9 @@ protocol-ctfd/
 python verify_challenges.py
 ```
 
-### 2. Install / Sync Challenges to CTFd
+### 2. Synchronize Challenges to CTFd
 ```bash
-# Sync all configured challenges
-python -m ctfcli challenge sync
-
-# Or install a specific level
-python -m ctfcli challenge install challenges/level-01
+ctf challenge sync
 ```
 
 ---

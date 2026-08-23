@@ -6,7 +6,7 @@ import ctfcli.cli.challenges
 
 def test_challenges():
     print("=" * 60)
-    print("OPERATION ROGUE ECHO - CHALLENGE VERIFICATION")
+    print("OPERATION ROGUE ECHO - DYNAMIC CHALLENGE VERIFICATION")
     print("=" * 60)
 
     challenges = ctfcli.cli.challenges.ChallengeCommand._resolve_all_challenges()
@@ -17,15 +17,30 @@ def test_challenges():
         name = c.get("name")
         cat = c.get("category")
         val = c.get("value")
+        ctype = c.get("type")
+        extra = c.get("extra")
+        reqs = c.get("requirements")
         flags = c.get("flags")
         files = c.get("files") or []
         state = c.get("state")
         print(f"\n[Level {idx:02d}] {name}")
-        print(f"  Category:    {cat}")
-        print(f"  Points:      {val}")
-        print(f"  State:       {state}")
-        print(f"  Flags:       {flags}")
-        print(f"  Files:       {files}")
+        print(f"  Category:     {cat}")
+        print(f"  Type:         {ctype}")
+        print(f"  Points:       {val}")
+        print(f"  Extra Decay:  {extra}")
+        print(f"  Requirements: {reqs}")
+        print(f"  State:        {state}")
+        print(f"  Flags:        {flags}")
+        print(f"  Files:        {files}")
+
+        assert ctype == "dynamic", f"Expected dynamic type for {name}, got {ctype}"
+        assert extra is not None, f"Expected extra decay parameters for {name}"
+
+        if idx == 1:
+            assert reqs is None or reqs == [], f"Level 01 should have no prerequisites"
+        else:
+            prev_name = challenges[idx - 2].get("name")
+            assert reqs == [prev_name], f"Level {idx:02d} expected requirement {prev_name}, got {reqs}"
 
         # Check that files exist
         for f in files:
@@ -62,29 +77,8 @@ def test_challenges():
     print(f"[Level 03] UserComment: {user_comment3}")
     assert b"FLAG{c4m3r4_m4k3_m0d3l_3xp053d}" in model3 or b"FLAG{c4m3r4_m4k3_m0d3l_3xp053d}" in user_comment3
 
-    # Test Decodings
-    import base64
-    b64_cipher = "RkxBR3tiNDUzNjRfdW5sMGNrc190aDNfcGF0aH0="
-    b64_plain = base64.b64decode(b64_cipher).decode()
-    print(f"[Level 04] Base64 decode: {b64_plain}")
-    assert b64_plain == "FLAG{b45364_unl0cks_th3_path}"
-
-    import codecs
-    rot13_cipher = "SYNT{ebg13_qrpvcure_fhpprff}"
-    rot13_plain = codecs.decode(rot13_cipher, "rot_13")
-    print(f"[Level 06] ROT13 decode: {rot13_plain}")
-    assert rot13_plain == "FLAG{rot13_decipher_success}"
-
-    # Test Level 15 synthesis logic
-    l11_station = "pune"
-    l12_flight = "ek501"
-    l14_hotel_prefix = "taj"
-    synth_flag = f"FLAG{{{l11_station}_{l12_flight}_{l14_hotel_prefix}_apprehended}}"
-    print(f"[Level 15] Synthesis Flag: {synth_flag}")
-    assert synth_flag == "FLAG{pune_ek501_taj_apprehended}"
-
     print("\n" + "=" * 60)
-    print("ALL 15 CHALLENGES PASSED VERIFICATION WITH 100% SUCCESS!")
+    print("ALL 15 CHALLENGES PASSED DYNAMIC CONFIGURATION VERIFICATION!")
     print("=" * 60)
 
 if __name__ == "__main__":

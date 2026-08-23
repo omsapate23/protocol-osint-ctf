@@ -1,11 +1,18 @@
 name: "Level 07: Google Dorking 101"
 author: "PROTOCOL"
 category: "Search Recon"
-value: 125
+value: 350
+type: dynamic
+extra:
+  initial: 350
+  decay: 25
+  minimum: 150
 description: |
   Viktor leaked an unindexed PDF document containing company notes. Use Google search filters (dorks) to find the leaked file.
   
   **Flag Format:** `FLAG{...}`
 flags:
   - "FLAG{g00gl3_d0rk1ng_3xp053d}"
+requirements:
+  - "Level 06: Caesar's Escape"
 state: visible

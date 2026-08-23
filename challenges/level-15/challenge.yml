@@ -1,7 +1,12 @@
 name: "Level 15: The Final Takedown"
 author: "PROTOCOL"
 category: "Master Challenge / Synthesis"
-value: 250
+value: 600
+type: dynamic
+extra:
+  initial: 600
+  decay: 35
+  minimum: 300
 description: |
   Assemble the master apprehension code using the clues collected from your investigation:
   `[Station Name from L11]_[Flight Code from L12]_[Safehouse Name Prefix from L14]_apprehended`
@@ -9,4 +14,6 @@ description: |
   Example format: `FLAG{mumbai_ai101_trident_apprehended}`
 flags:
   - "FLAG{pune_ek501_taj_apprehended}"
+requirements:
+  - "Level 14: The Safehouse Coordinates"
 state: visible

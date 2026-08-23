@@ -1,7 +1,12 @@
 name: "Level 10: The Departure Landmark"
 author: "PROTOCOL"
 category: "GEOINT / Image Search"
-value: 150
+value: 450
+type: dynamic
+extra:
+  initial: 450
+  decay: 30
+  minimum: 200
 description: |
   Viktor shared a photo taken while fleeing. Identify the landmark in the photo.
   
@@ -10,4 +15,6 @@ flags:
   - "FLAG{gateway_of_india}"
 files:
   - departure_view.jpg
+requirements:
+  - "Level 09: The Hidden Paste"
 state: visible

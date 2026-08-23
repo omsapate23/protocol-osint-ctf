@@ -1,7 +1,12 @@
 name: "Level 04: The Scrambled Transmission"
 author: "PROTOCOL"
 category: "Decoding / CyberChef"
-value: 75
+value: 250
+type: dynamic
+extra:
+  initial: 250
+  decay: 20
+  minimum: 100
 description: |
   We intercepted a scrambled string from Viktor's terminal buffer:
   `RkxBR3tiNDUzNjRfdW5sMGNrc190aDNfcGF0aH0=`
@@ -11,4 +16,6 @@ description: |
   **Flag Format:** `FLAG{...}`
 flags:
   - "FLAG{b45364_unl0cks_th3_path}"
+requirements:
+  - "Level 03: The Camera Fingerprint"
 state: visible

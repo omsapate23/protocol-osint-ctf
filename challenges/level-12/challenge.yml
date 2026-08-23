@@ -1,7 +1,12 @@
 name: "Level 12: The Airport Boarding Gate"
 author: "PROTOCOL"
 category: "GEOINT / Search"
-value: 175
+value: 450
+type: dynamic
+extra:
+  initial: 450
+  decay: 30
+  minimum: 200
 description: |
   Viktor posted a photo showing flight `EK501`. Find the 3-letter destination airport IATA code.
   
@@ -10,4 +15,6 @@ flags:
   - "FLAG{d35t1n4t10n_dxb}"
 files:
   - flight_board.jpg
+requirements:
+  - "Level 11: The Train Station"
 state: visible

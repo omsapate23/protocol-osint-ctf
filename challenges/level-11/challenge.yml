@@ -1,7 +1,12 @@
 name: "Level 11: The Train Station"
 author: "PROTOCOL"
 category: "GEOINT / Image Search"
-value: 175
+value: 450
+type: dynamic
+extra:
+  initial: 450
+  decay: 30
+  minimum: 200
 description: |
   An image recovered from Viktor's social account shows an Indian Railways station platform with unique architectural details. Identify the station.
   
@@ -10,4 +15,6 @@ flags:
   - "FLAG{pune_junction}"
 files:
   - station_platform.jpg
+requirements:
+  - "Level 10: The Departure Landmark"
 state: visible

@@ -1,7 +1,12 @@
 name: "Level 02: The Hidden Signature"
 author: "PROTOCOL"
 category: "Web Recon"
-value: 50
+value: 150
+type: dynamic
+extra:
+  initial: 150
+  decay: 15
+  minimum: 50
 description: |
   Viktor left a static page on XYZ Ltd.'s internal server. Inspect the page source to find his hidden signature.
   
@@ -10,4 +15,6 @@ flags:
   - "FLAG{v13w_50urc3_15_f1r5t_5t3p}"
 files:
   - goodbye.html
+requirements:
+  - "Level 01: The Break-In"
 state: visible
