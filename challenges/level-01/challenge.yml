@@ -1,0 +1,15 @@
+name: "Level 01: The Break-In"
+author: "PROTOCOL"
+category: "Metadata / EXIF"
+value: 50
+description: |
+  At 02:40 AM, rogue ex-employee Viktor Vance accessed the server room of XYZ Ltd. and left a snapshot behind. 
+  
+  Inspect the image file metadata using Jimpl.com to uncover the initial recovery flag.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{3x_3mpl0y33_l34v35_4_tr4c3}"
+files:
+  - datacenter_leak.jpg
+state: visible

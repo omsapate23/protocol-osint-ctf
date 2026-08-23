@@ -1,0 +1,13 @@
+name: "Level 03: The Camera Fingerprint"
+author: "PROTOCOL"
+category: "Metadata / EXIF"
+value: 75
+description: |
+  Forensics intercepted a second photo dropped by Viktor. Extract the device specifications and metadata tags to recover the flag.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{c4m3r4_m4k3_m0d3l_3xp053d}"
+files:
+  - device_photo.jpg
+state: visible

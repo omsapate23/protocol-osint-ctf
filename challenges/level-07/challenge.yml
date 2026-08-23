@@ -1,0 +1,11 @@
+name: "Level 07: Google Dorking 101"
+author: "PROTOCOL"
+category: "Search Recon"
+value: 125
+description: |
+  Viktor leaked an unindexed PDF document containing company notes. Use Google search filters (dorks) to find the leaked file.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{g00gl3_d0rk1ng_3xp053d}"
+state: visible

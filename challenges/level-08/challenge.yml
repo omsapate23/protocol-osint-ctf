@@ -1,0 +1,11 @@
+name: "Level 08: The Deleted Webpage"
+author: "PROTOCOL"
+category: "Web Archive"
+value: 125
+description: |
+  Viktor wiped his personal webpage (`http://vance-tech.xyz/note`) before fleeing. Use the Wayback Machine to view the archived snapshot.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{w4yb4ck_m4ch1n3_r3m3mb3r5}"
+state: visible

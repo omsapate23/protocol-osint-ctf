@@ -3,4 +3,20 @@ url = https://protocol-osint-ctf.onrender.com
 access_token = ctfd_01c902e293d9101bb2c43da5f18757c494281d6865499ba0a9918827c84b3df6
 
 [challenges]
+challenges/level-01 = challenges/level-01
+challenges/level-02 = challenges/level-02
+challenges/level-03 = challenges/level-03
+challenges/level-04 = challenges/level-04
+challenges/level-05 = challenges/level-05
+challenges/level-06 = challenges/level-06
+challenges/level-07 = challenges/level-07
+challenges/level-08 = challenges/level-08
+challenges/level-09 = challenges/level-09
+challenges/level-10 = challenges/level-10
+challenges/level-11 = challenges/level-11
+challenges/level-12 = challenges/level-12
+challenges/level-13 = challenges/level-13
+challenges/level-14 = challenges/level-14
+challenges/level-15 = challenges/level-15
+
 

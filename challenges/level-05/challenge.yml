@@ -1,0 +1,11 @@
+name: "Level 05: The Burner Alias"
+author: "PROTOCOL"
+category: "SOCMINT / Username Recon"
+value: 100
+description: |
+  Threat intelligence discovered Viktor goes by the handle `viktor_echo_99`. Find where this profile is registered to view his bio.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{un4m3_3num3r4t10n_succ355}"
+state: visible

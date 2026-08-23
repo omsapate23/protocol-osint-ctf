@@ -1,0 +1,14 @@
+name: "Level 04: The Scrambled Transmission"
+author: "PROTOCOL"
+category: "Decoding / CyberChef"
+value: 75
+description: |
+  We intercepted a scrambled string from Viktor's terminal buffer:
+  `RkxBR3tiNDUzNjRfdW5sMGNrc190aDNfcGF0aH0=`
+  
+  Use CyberChef to decode the message.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{b45364_unl0cks_th3_path}"
+state: visible

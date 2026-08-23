@@ -1,0 +1,13 @@
+name: "Level 14: The Safehouse Coordinates"
+author: "PROTOCOL"
+category: "GEOINT / Google Maps"
+value: 225
+description: |
+  Viktor's final uploaded photo reveals a distinct hotel facade across the water. Identify the building name.
+  
+  **Flag Format:** `FLAG{building_name}` (lowercase, underscores, e.g., `FLAG{hotel_trident}`).
+flags:
+  - "FLAG{t4j_m4h4l_p4l4c3}"
+files:
+  - balcony_view.jpg
+state: visible

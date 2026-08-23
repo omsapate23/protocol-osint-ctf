@@ -1,0 +1,11 @@
+name: "Level 09: The Hidden Paste"
+author: "PROTOCOL"
+category: "Search Recon"
+value: 150
+description: |
+  Viktor dropped a note on a paste hosting site referencing `Operation Rogue Echo`. Locate the paste to retrieve the flag.
+  
+  **Flag Format:** `FLAG{...}`
+flags:
+  - "FLAG{p45t3_d0rk1ng_unc0v3r3d}"
+state: visible

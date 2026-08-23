@@ -1,0 +1,13 @@
+name: "Level 11: The Train Station"
+author: "PROTOCOL"
+category: "GEOINT / Image Search"
+value: 175
+description: |
+  An image recovered from Viktor's social account shows an Indian Railways station platform with unique architectural details. Identify the station.
+  
+  **Flag Format:** `FLAG{station_name}` (lowercase, underscores, e.g., `FLAG{mumbai_central}`).
+flags:
+  - "FLAG{pune_junction}"
+files:
+  - station_platform.jpg
+state: visible

@@ -1,0 +1,13 @@
+name: "Level 13: The Street Corner Cafe"
+author: "PROTOCOL"
+category: "GEOINT / Google Maps"
+value: 200
+description: |
+  Viktor checked into a vintage cafe near the harbor. Use the visual clues and Google Maps to identify the cafe's exact name.
+  
+  **Flag Format:** `FLAG{cafe_name}` (lowercase, underscores, e.g., `FLAG{blue_tokai}`).
+flags:
+  - "FLAG{cafe_mondegar}"
+files:
+  - cafe_front.jpg
+state: visible

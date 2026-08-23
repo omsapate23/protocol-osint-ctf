@@ -1,0 +1,13 @@
+name: "Level 10: The Departure Landmark"
+author: "PROTOCOL"
+category: "GEOINT / Image Search"
+value: 150
+description: |
+  Viktor shared a photo taken while fleeing. Identify the landmark in the photo.
+  
+  **Flag Format:** `FLAG{landmark_name}` (lowercase, words separated by underscores, e.g., `FLAG{eiffel_tower}`).
+flags:
+  - "FLAG{gateway_of_india}"
+files:
+  - departure_view.jpg
+state: visible
