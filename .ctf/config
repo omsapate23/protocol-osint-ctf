@@ -1,7 +1,6 @@
 [config]
 url = https://protocol-osint-ctf.onrender.com
-access_token = ctfd_377775b63aef511e5c4d5168f01b65ec662b9ec0b5f4743eb9220cf401f05bc6
-
+access_token = ctfd_7926b70bc5e90fe70462945570a341fd6e047bb29ae6d0153ca273d750cbb294
 [challenges]
 challenges/level-01 = challenges/level-01
 challenges/level-02 = challenges/level-02
