@@ -1,20 +1,26 @@
-name: "Level 13: The Street Corner Cafe"
-author: "PROTOCOL"
-category: "GEOINT / Google Maps"
+name: 'Level 13: The Street Corner Cafe'
+author: PROTOCOL
+category: GEOINT / Google Maps
 value: 600
 type: dynamic
 extra:
   initial: 600
   decay: 35
   minimum: 300
-description: |
+description: |-
   Viktor checked into a vintage cafe near the harbor. Use the visual clues and Google Maps to identify the cafe's exact name.
-  
-  **Flag Format:** `FLAG{cafe_name}` (lowercase, underscores, e.g., `FLAG{blue_tokai}`).
+
+  **Flag Format:** `PROTOCOL{cafe_name}` (lowercase, underscores, e.g., `PROTOCOL{blue_tokai}`).
 flags:
-  - "FLAG{cafe_mondegar}"
+- PROTOCOL{cafe_mondegar}
 files:
-  - cafe_front.jpg
+- cafe_front.jpg
+hints:
+- content: >-
+    Examine the vintage cafe entrance in the photo showing cartoon wall murals and
+    heritage architecture in Colaba, Mumbai. Search on Google Maps near Colaba Causeway
+    to verify the cafe name.
+  cost: 60
 requirements:
-  - "Level 12: The Airport Boarding Gate"
+- 'Level 12: The Airport Boarding Gate'
 state: visible

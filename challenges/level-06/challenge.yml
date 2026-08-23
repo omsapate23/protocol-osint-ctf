@@ -1,21 +1,27 @@
-name: "Level 06: Caesar's Escape"
-author: "PROTOCOL"
-category: "Decoding / CyberChef"
+name: 'Level 06: Caesar''s Escape'
+author: PROTOCOL
+category: Decoding / CyberChef
 value: 250
 type: dynamic
 extra:
   initial: 250
   decay: 20
   minimum: 100
-description: |
+description: |-
   Viktor shifted his final note using a classic Caesar cipher (ROT13):
-  `SYNT{ebg13_qrpvcure_fhpprff}`
-  
+  `CEBGBPBY{ebg13_qrpvcure_fhpprff}`
+
   Use CyberChef to reveal the plaintext.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{rot13_decipher_success}"
+- PROTOCOL{rot13_decipher_success}
+hints:
+- content: >-
+    The text is scrambled using a classic Caesar substitution cipher with a 13-character
+    rotation (ROT13). Notice that 'CEBGBPBY' shifts back to 'PROTOCOL'. Use the ROT13
+    recipe in CyberChef.
+  cost: 25
 requirements:
-  - "Level 05: The Burner Alias"
+- 'Level 05: The Burner Alias'
 state: visible

@@ -1,20 +1,26 @@
-name: "Level 10: The Departure Landmark"
-author: "PROTOCOL"
-category: "GEOINT / Image Search"
+name: 'Level 10: The Departure Landmark'
+author: PROTOCOL
+category: GEOINT / Image Search
 value: 450
 type: dynamic
 extra:
   initial: 450
   decay: 30
   minimum: 200
-description: |
+description: |-
   Viktor shared a photo taken while fleeing. Identify the landmark in the photo.
-  
-  **Flag Format:** `FLAG{landmark_name}` (lowercase, words separated by underscores, e.g., `FLAG{eiffel_tower}`).
+
+  **Flag Format:** `PROTOCOL{landmark_name}` (lowercase, words separated by underscores, e.g., `PROTOCOL{eiffel_tower}`).
 flags:
-  - "FLAG{gateway_of_india}"
+- PROTOCOL{gateway_of_india}
 files:
-  - departure_view.jpg
+- departure_view.jpg
+hints:
+- content: >-
+    Upload the departure photo to Google Lens (lens.google.com) or perform a reverse
+    image search. Notice the distinct yellow basalt stone arch and waterfront harbor
+    setting in Mumbai.
+  cost: 45
 requirements:
-  - "Level 09: The Hidden Paste"
+- 'Level 09: The Hidden Paste'
 state: visible

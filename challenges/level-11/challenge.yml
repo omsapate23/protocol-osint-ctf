@@ -1,20 +1,26 @@
-name: "Level 11: The Train Station"
-author: "PROTOCOL"
-category: "GEOINT / Image Search"
+name: 'Level 11: The Train Station'
+author: PROTOCOL
+category: GEOINT / Image Search
 value: 450
 type: dynamic
 extra:
   initial: 450
   decay: 30
   minimum: 200
-description: |
+description: |-
   An image recovered from Viktor's social account shows an Indian Railways station platform with unique architectural details. Identify the station.
-  
-  **Flag Format:** `FLAG{station_name}` (lowercase, underscores, e.g., `FLAG{mumbai_central}`).
+
+  **Flag Format:** `PROTOCOL{station_name}` (lowercase, underscores, e.g., `PROTOCOL{mumbai_central}`).
 flags:
-  - "FLAG{pune_junction}"
+- PROTOCOL{pune_junction}
 files:
-  - station_platform.jpg
+- station_platform.jpg
+hints:
+- content: >-
+    Crop the image focusing on the platform architecture, train coaches, and the yellow
+    Indian Railways station signboard in the background. Use Google Lens or search
+    the visible Marathi/English lettering.
+  cost: 45
 requirements:
-  - "Level 10: The Departure Landmark"
+- 'Level 10: The Departure Landmark'
 state: visible

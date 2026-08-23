@@ -1,18 +1,24 @@
-name: "Level 09: The Hidden Paste"
-author: "PROTOCOL"
-category: "Search Recon"
+name: 'Level 09: The Hidden Paste'
+author: PROTOCOL
+category: Search Recon
 value: 350
 type: dynamic
 extra:
   initial: 350
   decay: 25
   minimum: 150
-description: |
+description: |-
   Viktor dropped a note on a paste hosting site referencing `Operation Rogue Echo`. Locate the paste to retrieve the flag.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{p45t3_d0rk1ng_unc0v3r3d}"
+- PROTOCOL{p45t3_d0rk1ng_unc0v3r3d}
+hints:
+- content: >-
+    Search public paste repositories using Google search operators. Try targeting
+    popular pastebin services with a dork such as: site:rentry.co 'Operation Rogue
+    Echo' or site:pastebin.com 'Operation Rogue Echo'.
+  cost: 35
 requirements:
-  - "Level 08: The Deleted Webpage"
+- 'Level 08: The Deleted Webpage'
 state: visible

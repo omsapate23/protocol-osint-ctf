@@ -1,18 +1,24 @@
-name: "Level 05: The Burner Alias"
-author: "PROTOCOL"
-category: "SOCMINT / Username Recon"
+name: 'Level 05: The Burner Alias'
+author: PROTOCOL
+category: SOCMINT / Username Recon
 value: 250
 type: dynamic
 extra:
   initial: 250
   decay: 20
   minimum: 100
-description: |
+description: |-
   Threat intelligence discovered Viktor goes by the handle `viktor_echo_99`. Find where this profile is registered to view his bio.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{un4m3_3num3r4t10n_succ355}"
+- PROTOCOL{un4m3_3num3r4t10n_succ355}
+hints:
+- content: >-
+    Use username reconnaissance tools like WhatsMyName.app or search engines to find
+    registered profiles under 'viktor_echo_99'. Check the public bio / description
+    of his account.
+  cost: 25
 requirements:
-  - "Level 04: The Scrambled Transmission"
+- 'Level 04: The Scrambled Transmission'
 state: visible

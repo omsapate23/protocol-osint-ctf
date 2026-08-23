@@ -1,20 +1,26 @@
-name: "Level 12: The Airport Boarding Gate"
-author: "PROTOCOL"
-category: "GEOINT / Search"
+name: 'Level 12: The Airport Boarding Gate'
+author: PROTOCOL
+category: GEOINT / Search
 value: 450
 type: dynamic
 extra:
   initial: 450
   decay: 30
   minimum: 200
-description: |
+description: |-
   Viktor posted a photo showing flight `EK501`. Find the 3-letter destination airport IATA code.
-  
-  **Flag Format:** `FLAG{d35t1n4t10n_XXX}` (e.g., `FLAG{d35t1n4t10n_del}`).
+
+  **Flag Format:** `PROTOCOL{d35t1n4t10n_XXX}` (e.g., `PROTOCOL{d35t1n4t10n_del}`).
 flags:
-  - "FLAG{d35t1n4t10n_dxb}"
+- PROTOCOL{d35t1n4t10n_dxb}
 files:
-  - flight_board.jpg
+- flight_board.jpg
+hints:
+- content: >-
+    The flight code displayed on the board is EK501 (operated by Emirates from Mumbai
+    BOM). Search the flight route to identify the 3-letter IATA code of its primary
+    destination airport in the UAE.
+  cost: 45
 requirements:
-  - "Level 11: The Train Station"
+- 'Level 11: The Train Station'
 state: visible

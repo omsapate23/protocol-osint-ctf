@@ -1,20 +1,26 @@
-name: "Level 01: The Break-In"
-author: "PROTOCOL"
-category: "Metadata / EXIF"
+name: 'Level 01: The Break-In'
+author: PROTOCOL
+category: Metadata / EXIF
 value: 150
 type: dynamic
 extra:
   initial: 150
   decay: 15
   minimum: 50
-description: |
-  At 02:40 AM, rogue ex-employee Viktor Vance accessed the server room of XYZ Ltd. and left a snapshot behind. 
-  
+description: |-
+  At 02:40 AM, rogue ex-employee Viktor Vance accessed the server room of XYZ Ltd. and left a snapshot behind.
+
   Inspect the image file metadata using Jimpl.com to uncover the initial recovery flag.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{3x_3mpl0y33_l34v35_4_tr4c3}"
+- PROTOCOL{3x_3mpl0y33_l34v35_4_tr4c3}
 files:
-  - datacenter_leak.jpg
+- datacenter_leak.jpg
+hints:
+- content: >-
+    Upload the downloaded image to an online EXIF metadata inspector such as Jimpl.com
+    or run 'exiftool datacenter_leak.jpg'. Pay close attention to the UserComment
+    and ImageDescription fields.
+  cost: 15
 state: visible

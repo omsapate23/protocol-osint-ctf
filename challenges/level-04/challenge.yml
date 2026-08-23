@@ -1,21 +1,27 @@
-name: "Level 04: The Scrambled Transmission"
-author: "PROTOCOL"
-category: "Decoding / CyberChef"
+name: 'Level 04: The Scrambled Transmission'
+author: PROTOCOL
+category: Decoding / CyberChef
 value: 250
 type: dynamic
 extra:
   initial: 250
   decay: 20
   minimum: 100
-description: |
+description: |-
   We intercepted a scrambled string from Viktor's terminal buffer:
-  `RkxBR3tiNDUzNjRfdW5sMGNrc190aDNfcGF0aH0=`
-  
+  `UFJPVE9DT0x7YjQ1MzY0X3VubDBja3NfdGgzX3BhdGh9`
+
   Use CyberChef to decode the message.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{b45364_unl0cks_th3_path}"
+- PROTOCOL{b45364_unl0cks_th3_path}
+hints:
+- content: >-
+    The string ends with an '=' padding character and consists of alphanumeric characters,
+    which is characteristic of Base64 encoding. Open CyberChef (gchq.github.io/CyberChef)
+    and apply the 'From Base64' recipe on the ciphertext.
+  cost: 25
 requirements:
-  - "Level 03: The Camera Fingerprint"
+- 'Level 03: The Camera Fingerprint'
 state: visible

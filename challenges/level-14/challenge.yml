@@ -1,20 +1,25 @@
-name: "Level 14: The Safehouse Coordinates"
-author: "PROTOCOL"
-category: "GEOINT / Google Maps"
+name: 'Level 14: The Safehouse Coordinates'
+author: PROTOCOL
+category: GEOINT / Google Maps
 value: 600
 type: dynamic
 extra:
   initial: 600
   decay: 35
   minimum: 300
-description: |
+description: |-
   Viktor's final uploaded photo reveals a distinct hotel facade across the water. Identify the building name.
-  
-  **Flag Format:** `FLAG{building_name}` (lowercase, underscores, e.g., `FLAG{hotel_trident}`).
+
+  **Flag Format:** `PROTOCOL{building_name}` (lowercase, underscores, e.g., `PROTOCOL{hotel_trident}`).
 flags:
-  - "FLAG{t4j_m4h4l_p4l4c3}"
+- PROTOCOL{t4j_m4h4l_p4l4c3}
 files:
-  - balcony_view.jpg
+- balcony_view.jpg
+hints:
+- content: >-
+    The balcony overlooks a world-famous red-domed heritage luxury hotel across Mumbai
+    harbor next to the Gateway of India. Identify the full hotel name.
+  cost: 60
 requirements:
-  - "Level 13: The Street Corner Cafe"
+- 'Level 13: The Street Corner Cafe'
 state: visible

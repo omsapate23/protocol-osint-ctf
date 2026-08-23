@@ -1,18 +1,24 @@
-name: "Level 08: The Deleted Webpage"
-author: "PROTOCOL"
-category: "Web Archive"
+name: 'Level 08: The Deleted Webpage'
+author: PROTOCOL
+category: Web Archive
 value: 350
 type: dynamic
 extra:
   initial: 350
   decay: 25
   minimum: 150
-description: |
+description: |-
   Viktor wiped his personal webpage (`http://vance-tech.xyz/note`) before fleeing. Use the Wayback Machine to view the archived snapshot.
-  
-  **Flag Format:** `FLAG{...}`
+
+  **Flag Format:** `PROTOCOL{...}`
 flags:
-  - "FLAG{w4yb4ck_m4ch1n3_r3m3mb3r5}"
+- PROTOCOL{w4yb4ck_m4ch1n3_r3m3mb3r5}
+hints:
+- content: >-
+    When a webpage is deleted from the live internet, historical web archive crawlers
+    often preserve past snapshots. Paste the target URL (http://vance-tech.xyz/note)
+    into the Wayback Machine (web.archive.org).
+  cost: 35
 requirements:
-  - "Level 07: Google Dorking 101"
+- 'Level 07: Google Dorking 101'
 state: visible
