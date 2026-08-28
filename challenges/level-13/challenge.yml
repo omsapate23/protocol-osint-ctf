@@ -10,11 +10,15 @@ extra:
 description: |-
   Viktor checked into a vintage cafe near the harbor. Use the visual clues and Google Maps to identify the cafe's exact name.
 
+  <div class="mt-3 mb-2">
+    <button type="button" onclick="downloadAsset('https://raw.githubusercontent.com/omsapate23/protocol-osint-ctf/main/challenges/level-13/cafe_front.jpg', 'cafe_front.jpg')" class="btn btn-info btn-file text-truncate">
+      <i class="fas fa-download mr-1"></i> cafe_front.jpg
+    </button>
+  </div>
+
   **Flag Format:** `PROTOCOL{cafe_name}` (lowercase, underscores, e.g., `PROTOCOL{blue_tokai}`).
 flags:
 - PROTOCOL{cafe_mondegar}
-files:
-- cafe_front.jpg
 hints:
 - content: >-
     Examine the vintage cafe entrance in the photo showing cartoon wall murals and

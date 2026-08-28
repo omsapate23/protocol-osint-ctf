@@ -10,11 +10,15 @@ extra:
 description: |-
   Viktor left a static page on XYZ Ltd.'s internal server. Inspect the page source to find his hidden signature.
 
+  <div class="mt-3 mb-2">
+    <button type="button" onclick="downloadAsset('https://raw.githubusercontent.com/omsapate23/protocol-osint-ctf/main/challenges/level-02/goodbye.html', 'goodbye.html')" class="btn btn-info btn-file text-truncate">
+      <i class="fas fa-download mr-1"></i> goodbye.html
+    </button>
+  </div>
+
   **Flag Format:** `PROTOCOL{...}`
 flags:
 - PROTOCOL{v13w_50urc3_15_f1r5t_5t3p}
-files:
-- goodbye.html
 hints:
 - content: >-
     Open the HTML file in your web browser and view its source code (press Ctrl+U
